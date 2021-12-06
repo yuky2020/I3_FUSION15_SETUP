@@ -1,0 +1,3 @@
+WARNING: Unknown keyboard shortcut: 'ctrl+grave'
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":1"
+      after 1927 requests (1927 known processed) with 0 events remaining.

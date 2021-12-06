@@ -1,0 +1,67 @@
+-- RPHL CONKY CONFIG / New syntax
+
+conky.config = {
+
+background = true,
+double_buffer = true,
+
+alignment = 'top_right',
+gap_x = 0,
+gap_y = 100,
+
+own_window = true,
+own_window_type = 'normal',
+own_window_transparent = yes,  -- if yes, show background
+own_window_argb_visual = true,
+own_window_argb_value = 0, -- (transparent) 0..255 (opaque) is ignored if own_window_transparent yes
+own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+draw_borders = false,
+draw_graph_borders = true,
+default_outline_color = ffffff,
+
+minimum_width = 250, minimum_height = 10,
+update_interval = 2, -- in seconds
+uppercase = false,
+use_spacer = 'none',
+
+show_graph_scale = false,
+show_graph_range = false,
+
+use_xft = true, -- antialiased fonts
+xftalpha = 1,
+font = 'JetBrainsMonoMedium Nerd Font:size=10',
+
+default_color = '#fff',
+color1 = '#EF6487', -- red
+color2 = '#65AEF7', -- blue
+color3 = '#FDD877', -- yellow
+color4 = '#5ECA89', -- green
+
+cpu_avg_samples = 2, -- conky setting
+net_avg_samples = 2,
+no_buffers = true,   -- Subtract (file system) buffers from used memory?
+out_to_console = false,
+out_to_stderr = false,
+
+};
+
+conky.text = [[${color4}
+  DESKTOP ${color}
+SUPER     Tiling
+SUPER    Send to ws
+SUPER     Go to ws
+SUPER S    Resizing
+Alt Tab    Rofi${color1}
+
+ CMUS ${color}
+/name      Search track
+//name     Search art./album
+ L	   :live-filter
+ F 	   :filter (genre="pop")
++ / -	   Volume up/dwn 10%
+c          Pause
+s 	   Shuffle
+u	   :update-cache
+
+]];
